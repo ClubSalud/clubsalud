@@ -26,6 +26,12 @@ export default function Layout({
             label: 'Empleados',
             icon: 'pi pi-users',
             url: '/medicina-laboral-empresas/admin/empleados'
+          },
+          {
+            label: 'Cloud',
+            icon: 'pi pi-cloud',
+            url: 'https://cloud.medintt.com',
+            target: '_blank'
           }
         ]}
       />

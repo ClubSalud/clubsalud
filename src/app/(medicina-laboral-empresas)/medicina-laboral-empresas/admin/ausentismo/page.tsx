@@ -35,7 +35,6 @@ export default function Ausentimos(): ReactElement {
         hasta,
         mesReferencia
       }
-      console.log(data)
       const response = await getAusentismos(data)
       if (response.ok) {
         return response.data
@@ -47,12 +46,13 @@ export default function Ausentimos(): ReactElement {
 
   return (
     <div className='flex flex-column'>
-      <form className='flex flex-row'>
-        <div className='flex flex-row gap-2'>
+      <form className='flex flex-row align-items-center justify-content-start gap-4'>
+        <div className='flex flex-row gap-2 align-items-center'>
           <p>Desde</p>
           <Calendar
             required
             value={desde}
+            className='w-8rem h-2rem'
             {...register('desde')}
             onChange={(e) => {
               if (e.value !== undefined) {
@@ -61,11 +61,12 @@ export default function Ausentimos(): ReactElement {
             }}
           />
         </div>
-        <div className='flex flex-row gap-2'>
+        <div className='flex flex-row gap-2 align-items-center'>
           <p>Hasta</p>
           <Calendar
             required
             value={hasta}
+            className='w-8rem h-2rem'
             {...register('hasta')}
             onChange={(e) => {
               if (e.value !== undefined) {
@@ -74,11 +75,12 @@ export default function Ausentimos(): ReactElement {
             }}
           />
         </div>
-        <div className='flex flex-row gap-2'>
+        <div className='flex flex-row gap-2 align-items-center'>
           <p>Mes de Referencia</p>
           <Calendar
             required
             value={mesReferencia}
+            className='w-8rem h-2rem'
             {...register('mesReferencia')}
             onChange={(e) => {
               if (e.value !== undefined) {
@@ -90,9 +92,14 @@ export default function Ausentimos(): ReactElement {
       </form>
       <DataTable
         value={ausentimos}
-        size='small'
-        scrollHeight='87dvh'
         scrollable
+        scrollHeight='92dvh'
+        size='small'
+        paginator
+        paginatorPosition='bottom'
+        alwaysShowPaginator
+        rows={20}
+        tableStyle={{ minWidth: '200px' }}
       >
         <Column
           field='Paciente'
@@ -114,14 +121,14 @@ export default function Ausentimos(): ReactElement {
           field='Del'
           header='Del'
           body={(rowData) => (
-            <p>{DateUtils.formatToDDMMYYutc(rowData.Del as Date)}</p>
+            <p className='w-5rem'>{DateUtils.formatToDDMMYYutc(rowData.Del as Date)}</p>
           )}
         />
         <Column
           field='Al'
           header='Al'
           body={(rowData) => (
-            <p>{DateUtils.formatToDDMMYYutc(rowData.Al as Date)}</p>
+            <p className='w-5rem'>{DateUtils.formatToDDMMYYutc(rowData.Al as Date)}</p>
           )}
         />
         <Column

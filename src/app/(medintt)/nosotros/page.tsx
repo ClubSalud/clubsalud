@@ -1,6 +1,6 @@
 'use client'
 
-import ManagementProfile from 'components/Medintt/ManagementProfile'
+import Management from 'components/Medintt/Management'
 import { Carousel } from 'primereact/carousel'
 import { type ReactElement } from 'react'
 
@@ -50,43 +50,7 @@ export default function Whoweare(): ReactElement {
           bienestar integral.
         </span>
         <div className='flex flex-column md:flex-row align-items-center gap-7 w-full justify-content-center'>
-          <ManagementProfile
-            src={'/images/oscar.jpg'}
-            name={'Dr. Oscar Franchi'}
-            description={
-              'Director de Medintt. Médico especialista en Ortopedia, Traumatología y Medicina del Trabajo. Formación en Cirugía Mini Invasiva del Pie.'
-            }
-            socialmedia={[
-              { url: 'https://www.instagram.com/droscarfranchi/', icon: 'pi pi-instagram' },
-              { url: 'https://www.facebook.com/oscar.franchi.9', icon: 'pi pi-facebook' },
-              { url: 'https://www.linkedin.com/in/oscar-franchi-74b0b810', icon: 'pi pi-linkedin' }
-            ]}
-          />
-
-          <ManagementProfile
-            src={'/images/cecilia.jpg'}
-            name={'Dra. Cecilia Chacón'}
-            description={
-              'Gerente general. Especialista en clínica médica. Auditoría médica y Gestión de los Servicios de Salud.'
-            }
-            socialmedia={[
-              { url: 'https://www.instagram.com/cecilia.mariela.chacon', icon: 'pi pi-instagram' },
-              { url: 'https://www.facebook.com/ceciliamchacon', icon: 'pi pi-facebook' },
-              { url: 'https://www.linkedin.com/in/cecilia-chacon-37003b10', icon: 'pi pi-linkedin' }
-            ]}
-          />
-
-          <ManagementProfile
-            src={'/images/sergio.jpg'}
-            name={'Dr. Sergio Luscher'}
-            description={
-              'Especialista en Medicina del Deporte, Especialista en Traumatología y Ortopedia. Profesor Nacional de Educación Física.'
-            }
-            socialmedia={[
-              { url: 'https://www.instagram.com/sergio.luscher', icon: 'pi pi-instagram' },
-              { url: 'https://www.facebook.com/sergiohugo.luscher', icon: 'pi pi-facebook' }
-            ]}
-          />
+          <Management></Management>
         </div>
       </div>
 

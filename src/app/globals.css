@@ -1,0 +1,64 @@
+/* Custom spacing and navigation styling for Management carousel */
+.management-carousel {
+  width: 100rem;
+}
+
+.management-carousel .p-carousel-content {
+  padding: 0;
+}
+
+.management-carousel .p-carousel-items-content {
+  padding: 0 1rem;
+}
+
+.management-profile-card {
+  width: 18rem;
+  max-width: 100%;
+}
+
+.management-carousel .p-carousel-items-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.management-carousel .p-carousel-item {
+  display: flex;
+  flex: 1 0 auto;
+  padding: 0;
+}
+
+.management-carousel .p-carousel-item-content {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.management-carousel .p-carousel-prev,
+.management-carousel .p-carousel-next {
+  background: rgba(31, 41, 102, 0.85);
+  color: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.management-carousel .p-carousel-prev:hover,
+.management-carousel .p-carousel-next:hover {
+  background: rgba(31, 41, 102, 1);
+}
+
+@media screen and (max-width: 1199px) {
+  .management-carousel .p-carousel-items-container {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .management-carousel .p-carousel-items-container {
+    gap: 0.75rem;
+  }
+}

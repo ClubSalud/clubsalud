@@ -14,11 +14,19 @@ export default function ManagementProfile({
 }): ReactElement {
   return (
     <div
-      className='flex flex-column justify-content-center align-items-center w-19rem overflow-hidden text-primary border-round-3xl h-full'
+      className='management-profile-card flex flex-column overflow-hidden text-primary border-round-3xl h-full'
+      style={{ minHeight: '28rem' }}
     >
-      <img src={`${src}`} alt="" className='w-full border-round-top-3xl'/>
+      <div className='w-full overflow-hidden flex-shrink-0' style={{ height: '16rem' }}>
+        <img
+          src={`${src}`}
+          alt=""
+          className='w-full h-full border-round-top-3xl'
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+      </div>
       <div
-        className='border-round-bottom-3xl p-3 shadow-4 h-full'
+        className='border-round-bottom-3xl p-3 shadow-4 flex flex-column gap-3 flex-grow-1'
         style={{
           backdropFilter: 'blur(5px)',
           background:
@@ -41,7 +49,9 @@ export default function ManagementProfile({
             ))}
           </div>
         </div>
-        <span className='text-sm text-white'>{description}</span>
+        <div className='flex-grow-1 flex align-items-center'>
+          <span className='text-sm text-white line-height-3'>{description}</span>
+        </div>
       </div>
     </div>
   )

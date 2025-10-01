@@ -1,5 +1,7 @@
+import '../globals.css'
 import { PrimeReactProvider } from 'primereact/api'
 import NavBar from 'components/Medintt/NavBar'
+import 'primereact/resources/primereact.min.css'
 import 'primeflex/primeflex.css'
 import 'primeicons/primeicons.css'
 import './theme/theme.css'
